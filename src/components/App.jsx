@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
-import AddTask from './AddTask'
-import Menu from './MenuLayout'
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import Menu from './MenuLayout'
+import AddTask from './AddTask'
+import TasksList from './TasksList'
 
 
 class App extends Component {
@@ -12,14 +13,7 @@ class App extends Component {
                     <div>
                         <Menu />
                         <Redirect to='/tasks'/>
-                        {/*placeholder for the component*/}
-                        <Route path='/tasks' render={() => (
-                            <div>
-                                <h1 style = {{textAlign: 'center'}}>
-                                    Tasks
-                                </h1>
-                            </div>
-                        )}/>
+                        <Route path='/tasks' component={TasksList} />
                         <Route exact path={'/add'} component={AddTask} />
                         {/*placeholder for the component*/}
                         <Route path='/statistics' render={() => (

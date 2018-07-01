@@ -14,7 +14,9 @@ class MenuLayout extends Component {
         return (
             <div>
                 <Menu style = {{marginBottom: '50px', borderRadius: '0', height: '50px'}}
-                      color = {'black'} inverted widths={3}
+                      color = {'black'}
+                      inverted
+                      widths={3}
                 >
                     <Menu.Item
                         as={Link} to={'/tasks'}

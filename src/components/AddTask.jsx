@@ -38,11 +38,8 @@ class AddTask extends Component {
                                 </div>
                             </Card.Description>
                         </Card.Content>
-                        <Card.Content>
-                            <Button positive onClick={this.handleSubmit}>
-                                <Icon name = 'sticky note outline' />
-                                Add task
-                            </Button>
+                        <Card.Content extra>
+                            <Button content = 'Add task' positive onClick={this.handleSubmit} icon='edit outline' />
                         </Card.Content>
                     </Card>
                 </Form>
