@@ -12,7 +12,10 @@ class App extends Component {
                 <Router>
                     <div>
                         <Menu />
-                        <Redirect to='/tasks'/>
+                        <Route exact path="/" render={() => (
+                                <Redirect to='/tasks'/>
+                            )}
+                        />
                         <Route path='/tasks' component={TasksList} />
                         <Route exact path={'/add'} component={AddTask} />
                         {/*placeholder for the component*/}

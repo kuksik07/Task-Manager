@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Card, TextArea, Form, Button, Icon } from 'semantic-ui-react'
+import { Card, TextArea, Form, Button } from 'semantic-ui-react'
 import ColoredCircles from './ColoredCircles'
 
 const colors = [

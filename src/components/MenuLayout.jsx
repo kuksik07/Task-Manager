@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Menu, Icon } from 'semantic-ui-react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import AddTask from "./AddTask";
+import { Link } from "react-router-dom";
 
 class MenuLayout extends Component {
     state = { activeItem: 'tasks' }
