@@ -11,20 +11,10 @@ const colors = [
     'black'
 ]
 
-const styles = {
-    mb_15: {
-        'marginBottom': '15px',
-    },
-    mt_15: {
-        'marginTop': '15px',
-    },
-}
-
 class AddTask extends Component {
     state = {
         checkedColor: null,
     }
-
     render() {
         return(
             <div>
@@ -33,8 +23,8 @@ class AddTask extends Component {
                         <Card.Content>
                             <Card.Header color='green'>New task</Card.Header>
                             <Card.Description>
-                                <input style = {styles.mb_15}  name = "title" placeholder = 'Title' />
-                                <TextArea style = {{...styles.mb_15, maxHeight: 100, minHeight: 100 }}
+                                <input style = {{marginBottom: '15px'}}  name = "title" placeholder = 'Title' />
+                                <TextArea style = {{marginBottom: '15px', maxHeight: 100, minHeight: 100 }}
                                           autoHeight name = "description" placeholder = 'Description' />
                                 <div>
                                     {colors.map(color => (
