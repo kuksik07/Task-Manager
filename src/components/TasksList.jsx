@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
-import { Card } from 'semantic-ui-react'
+import Masonry from 'react-masonry-component';
 import Task from './Task'
 import tasks from '../tasks.json'
+
+const masonryOptions = {
+    columnWidth: 250,
+    gutter: 30,
+    isFitWidth: true,
+    horizontalOrder: true
+};
 
 class TasksList extends Component {
   state = {
@@ -10,7 +17,7 @@ class TasksList extends Component {
 
   render () {
       return (
-          <Card.Group itemsPerRow={3} centered>
+          <Masonry style = {{margin: '0 auto'}} options = {masonryOptions} >
               {tasks.map((task, index) =>
                   <Task
                       title = {task.title}
@@ -21,7 +28,7 @@ class TasksList extends Component {
                       key = {index}
                   />
               )}
-          </Card.Group>
+          </Masonry>
       )
   }
     handleDeleteClick = taskIndex => this.setState({
